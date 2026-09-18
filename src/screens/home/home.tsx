@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Button, Image, StyleSheet, Text, TextInput, View } from "react-native";
 
 export const Home = () => {
-    const [pokemon, setPokemon] = useState({name: String, sprite: String});
-    const [busca, setBusca] = useState("escreva aqui");
+    const [pokemon, setPokemon] = useState({name: 'yippe', sprite: 'https://avatars.fastly.steamstatic.com/06079aa271060229722208f1e5c50dd4ade1f98e_full.jpg'});
+    const [busca, setBusca] = useState("");
 
     const buscar = async () => {
         try {
@@ -17,7 +17,7 @@ export const Home = () => {
             });
         } catch (err) {
             setPokemon({
-                name: `${busca}: não encontrado`,
+                name: `${busca}: não encontrado (fique com yippe)`,
                 sprite: "https://avatars.fastly.steamstatic.com/06079aa271060229722208f1e5c50dd4ade1f98e_full.jpg",
             });
         }
